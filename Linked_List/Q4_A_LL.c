@@ -69,7 +69,6 @@ int main()
 			moveEvenItemsToBack(&ll); // You need to code this function
 			printf("The resulting linked list after moving even integers to the back of the linked list is: ");
 			printList(&ll);
-			removeAllItems(&ll);
 			break;
 		case 0:
 			removeAllItems(&ll);
@@ -86,7 +85,29 @@ int main()
 
 void moveEvenItemsToBack(LinkedList *ll)
 {
-	/* add your code here */
+	int size = ll->size;
+	int index = 0;
+	int item;
+	ListNode *curr = ll->head;
+
+	if (ll->head == NULL)
+		return;
+
+	for (int i = 0; i < size; i++)
+	{
+		item = curr->item;
+		curr = curr->next;
+
+		if (item % 2 == 1)
+		{
+			index++;
+		}
+		else
+		{
+			removeNode(ll, index);
+			insertNode(ll, size - 1, item);
+		}
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
