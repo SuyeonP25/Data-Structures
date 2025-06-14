@@ -103,6 +103,9 @@ int main()
 
 void frontBackSplitLinkedList(LinkedList *ll, LinkedList *resultFrontList, LinkedList *resultBackList)
 {
+	if (ll->head == NULL)
+		return;
+
 	int size = ll->size;
 	ListNode *last, *first;
 	last = findNode(ll, size % 2 == 0 ? size / 2 - 1 : size / 2);
