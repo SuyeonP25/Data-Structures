@@ -91,7 +91,10 @@ int main()
 void inOrderTraversal(BSTNode *root)
 {
 	if (root == NULL)
+	{
+		printf("Empty");
 		return;
+	}
 
 	Stack s;
 	s.top = NULL;

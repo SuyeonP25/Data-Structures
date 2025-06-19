@@ -104,8 +104,6 @@ int hasGreatGrandchild(BTNode *node)
 
     if (node == NULL)
         return -1;
-    else if (node->left == NULL && node->right == NULL)
-        return 0;
     else
     {
         lefth = hasGreatGrandchild(node->left);

@@ -92,7 +92,10 @@ int main()
 void preOrderIterative(BSTNode *root)
 {
 	if (root == NULL)
+	{
+		printf("Empty");
 		return;
+	}
 
 	Stack s;
 	s.top = NULL;
@@ -109,7 +112,7 @@ void preOrderIterative(BSTNode *root)
 			push(&s, curr->right);
 		if (curr->left != NULL)
 			push(&s, curr->left);
-		}
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////

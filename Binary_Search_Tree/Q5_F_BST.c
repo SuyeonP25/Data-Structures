@@ -92,7 +92,10 @@ int main()
 void postOrderIterativeS2(BSTNode *root)
 {
 	if (root == NULL)
+	{
+		printf("Empty");
 		return;
+	}
 
 	Stack s1, s2;
 	s1.top = NULL;
